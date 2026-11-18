@@ -18,4 +18,8 @@ class TaskManager:
                 t["completed"] = True
 
     def delete_task(self, task_id):
-        self.tasks = [t for t in self.tasks if t["id"] != task_id]
+        for t in self.tasks:
+            if t["id"] == task_id:
+                self.tasks.remove(t)
+                return True
+        raise ValueError("Invalid task ID.")
