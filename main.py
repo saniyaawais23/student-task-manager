@@ -14,7 +14,11 @@ def main():
         print("\n1.Add  2.Show  3.Complete  4.Delete  5.Exit")
         choice = input("Choose: ").strip()
         if choice == "1":
-            manager.add_task(input("Title: "))
+            try:
+                manager.add_task(input("Title: "))
+                print("Task added.")
+            except ValueError as e:
+                print(e)
         elif choice == "2":
             show(manager)
         elif choice == "3":
