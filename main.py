@@ -20,7 +20,11 @@ def main():
         elif choice == "3":
             manager.complete_task(int(input("Task ID: ")))
         elif choice == "4":
-            manager.delete_task(int(input("Task ID: ")))
+            try:
+                manager.delete_task(int(input("Task ID: ")))
+                print("Task deleted.")
+            except ValueError:
+                print("Invalid task ID.")
         elif choice == "5":
             break
         else:
