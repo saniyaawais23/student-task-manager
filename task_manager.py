@@ -16,6 +16,8 @@ class TaskManager:
         for t in self.tasks:
             if t["id"] == task_id:
                 t["completed"] = True
+                return True
+        return False
 
     def delete_task(self, task_id):
         self.tasks = [t for t in self.tasks if t["id"] != task_id]
