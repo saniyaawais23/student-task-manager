@@ -22,7 +22,10 @@ def main():
         elif choice == "2":
             show(manager)
         elif choice == "3":
-            manager.complete_task(int(input("Task ID: ")))
+            if manager.complete_task(int(input("Task ID: "))):
+                print("Task completed.")
+            else:
+                print("Task not found.")
         elif choice == "4":
             manager.delete_task(int(input("Task ID: ")))
         elif choice == "5":
