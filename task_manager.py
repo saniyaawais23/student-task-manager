@@ -3,7 +3,7 @@ class TaskManager:
         self.tasks = []
         self.next_id = 1
 
-        def add_task(self, title):
+    def add_task(self, title):
         if title is None or not title.strip():
             raise ValueError("Task title cannot be empty.")
         task = {"id": self.next_id, "title": title.strip(), "completed": False}
