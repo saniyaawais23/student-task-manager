@@ -1,3 +1,3 @@
 A Python console app to manage student tasks
 
-Project status: In Development
+Project status: Testing
